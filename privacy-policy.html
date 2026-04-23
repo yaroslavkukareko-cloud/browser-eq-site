@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browser EQ — Privacy Policy</title>
+  <meta
+    name="description"
+    content="Privacy Policy for Browser EQ, a parametric equalizer for browser tabs."
+  />
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --bg-2: #12151d;
+      --panel: rgba(255, 255, 255, 0.04);
+      --panel-2: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 210, 120, 0.12);
+      --text: #f4f6fb;
+      --muted: #b6bfd2;
+      --muted-2: #8f98aa;
+      --accent: #efb34a;
+      --accent-2: #ffcf73;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.38);
+      --radius: 22px;
+      --container: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(255, 176, 70, 0.10), transparent 28%),
+        radial-gradient(circle at 100% 15%, rgba(255, 176, 70, 0.08), transparent 26%),
+        linear-gradient(180deg, #090b10 0%, #0c1017 45%, #0b0d12 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(11, 13, 18, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: var(--text);
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255, 196, 82, 0.22), transparent 35%),
+        linear-gradient(180deg, #111726, #0d121d);
+      border: 1px solid rgba(255, 196, 82, 0.18);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-mark::before {
+      content: "";
+      position: absolute;
+      inset: 10px 8px;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      border-left: 0;
+      border-right: 0;
+      background:
+        linear-gradient(180deg, transparent 47%, var(--accent) 47%, var(--accent) 53%, transparent 53%);
+      transform: scale(1.05);
+      opacity: 0.95;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 56px 0 28px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent-2);
+      font-size: 12px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::after {
+      content: "";
+      width: 56px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 207, 115, 0.8), transparent);
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 760px;
+    }
+
+    .meta {
+      margin-top: 18px;
+      color: var(--muted-2);
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 14px 0 54px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    section + section {
+      margin-top: 18px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 25px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      word-break: break-word;
+    }
+
+    .footer {
+      padding: 0 0 52px;
+      color: var(--muted-2);
+      font-size: 14px;
+    }
+
+    .footer-card {
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 20px 26px;
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        display: none;
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Browser EQ</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#data-we-handle">Data We Handle</a>
+        <a href="#permissions">Permissions</a>
+        <a href="#sharing">Sharing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Privacy Policy</div>
+        <h1>Browser EQ Privacy Policy</h1>
+        <p class="lead">
+          This Privacy Policy explains how Browser EQ handles information when
+          you use the extension.
+        </p>
+        <div class="meta">Last updated: April 2026</div>
+      </div>
+    </section>
+
+    <section id="overview" class="content">
+      <div class="container">
+        <div class="card">
+          <h2>1. Overview</h2>
+          <p>
+            Browser EQ is a browser extension that provides visual parametric EQ
+            control for supported browser tabs. Its purpose is to let users
+            adjust audio locally inside the browser by editing an equalizer
+            curve, applying built-in presets, and changing output gain.
+          </p>
+          <p>
+            Browser EQ is designed as a local audio-processing tool. It is not
+            designed for advertising, user profiling, unrelated tracking, or the
+            resale of user data.
+          </p>
+        </div>
+
+        <section id="data-we-handle">
+          <div class="card">
+            <h2>2. Information Browser EQ Handles</h2>
+            <p>
+              In order to provide its core equalizer functionality, Browser EQ
+              may handle the following categories of information:
+            </p>
+            <ul>
+              <li>
+                <strong>Supported tab audio content:</strong> Browser EQ
+                processes the audio stream of a supported browser tab after the
+                user explicitly interacts with the extension.
+              </li>
+              <li>
+                <strong>Current tab information:</strong> Browser EQ may access
+                limited information about the active tab, such as whether the
+                tab is supported and which tab the user is currently working
+                with, in order to apply the selected audio settings correctly.
+              </li>
+              <li>
+                <strong>User settings:</strong> Browser EQ stores the user’s EQ
+                configuration, selected preset state, and output gain values so
+                those settings can be restored later.
+              </li>
+            </ul>
+            <p>
+              Browser EQ does not ask users to create an account and does not
+              intentionally collect personal identity information such as name,
+              postal address, phone number, or government identifiers.
+            </p>
+          </div>
+        </section>
+
+        <section id="how-we-use-data">
+          <div class="card">
+            <h2>3. How Browser EQ Uses Information</h2>
+            <p>Browser EQ uses the information above only to:</p>
+            <ul>
+              <li>identify the current supported tab,</li>
+              <li>capture and process supported tab audio locally,</li>
+              <li>apply EQ, preset, and output gain settings selected by the user,</li>
+              <li>restore saved settings between sessions.</li>
+            </ul>
+            <p>
+              Browser EQ does not use handled information for advertising,
+              behavioral profiling, creditworthiness decisions, or unrelated
+              analytics.
+            </p>
+          </div>
+        </section>
+
+        <section id="local-processing">
+          <div class="card">
+            <h2>4. Local Processing and Storage</h2>
+            <p>
+              Browser EQ is intended to process supported tab audio locally in
+              the browser. User settings are stored locally through the browser
+              extension storage system so the extension can preserve the selected
+              EQ profile and related controls.
+            </p>
+            <p>
+              Browser EQ is not designed to upload tab audio, page content, or
+              saved EQ settings to a remote server as part of its normal
+              operation.
+            </p>
+          </div>
+        </section>
+
+        <section id="permissions">
+          <div class="card">
+            <h2>5. Permissions Used by Browser EQ</h2>
+            <ul>
+              <li>
+                <strong>storage</strong> — used to save user settings such as EQ
+                curve data, preset selection, and output gain values.
+              </li>
+              <li>
+                <strong>tabs</strong> — used to identify and manage the current
+                tab so the extension can determine where to apply the selected
+                audio settings.
+              </li>
+              <li>
+                <strong>tabCapture</strong> — used to access the audio stream of
+                a supported browser tab after user interaction, so the extension
+                can apply equalizer processing.
+              </li>
+              <li>
+                <strong>offscreen</strong> — used to support background audio
+                processing without opening a visible extra page for the user.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="sharing">
+          <div class="card">
+            <h2>6. Sharing, Selling, and Transfers</h2>
+            <p>
+              Browser EQ does not sell user data.
+            </p>
+            <p>
+              Browser EQ is not designed to transfer handled information to data
+              brokers, advertisers, or unrelated third parties.
+            </p>
+            <p>
+              If a future version of Browser EQ introduces remote services,
+              telemetry, cloud sync, or any other external data transfer, this
+              Privacy Policy will be updated before those changes are published.
+            </p>
+          </div>
+        </section>
+
+        <section id="retention">
+          <div class="card">
+            <h2>7. Data Retention</h2>
+            <p>
+              Browser EQ retains saved settings only for as long as they remain
+              in the user’s browser extension storage or until the user removes
+              them by resetting settings, uninstalling the extension, or
+              clearing browser extension data.
+            </p>
+          </div>
+        </section>
+
+        <section id="security">
+          <div class="card">
+            <h2>8. Security</h2>
+            <p>
+              Browser EQ is designed to minimize data handling and keep
+              processing local wherever possible. However, no software or local
+              environment can be guaranteed to be completely free from security
+              risks. Users remain responsible for the security of their browser,
+              device, and operating environment.
+            </p>
+          </div>
+        </section>
+
+        <section id="third-party-services">
+          <div class="card">
+            <h2>9. Third-Party Services</h2>
+            <p>
+              Browser EQ may be distributed through the Chrome Web Store and may
+              provide links to external pages such as the official product page
+              or support page. Those external platforms and services are
+              governed by their own terms and privacy practices.
+            </p>
+            <p>
+              This page itself may be hosted through GitHub Pages. GitHub may
+              process technical request information in accordance with GitHub’s
+              own policies when users visit the site.
+            </p>
+          </div>
+        </section>
+
+        <section id="children">
+          <div class="card">
+            <h2>10. Children’s Privacy</h2>
+            <p>
+              Browser EQ is not specifically directed to children. If you
+              believe that data has been handled in a way that requires special
+              review or correction, please contact us using the details below.
+            </p>
+          </div>
+        </section>
+
+        <section id="changes">
+          <div class="card">
+            <h2>11. Changes to This Privacy Policy</h2>
+            <p>
+              This Privacy Policy may be updated from time to time to reflect
+              product changes, legal requirements, or clarification of current
+              practices. When material updates are made, the “Last updated” date
+              at the top of this page will be revised.
+            </p>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="card">
+            <h2>12. Contact</h2>
+            <p>
+              If you have questions about this Privacy Policy or Browser EQ,
+              please contact:
+            </p>
+            <p class="mono">zeronsfwhelp@gmail.com</p>
+            <p>
+              Official page:
+              <a class="mono" href="https://yaroslavkukareko-cloud.github.io/browser-eq-site/">YOUR_SITE_URL</a>
+            </p>
+            <p>
+              Chrome Web Store:
+              <a class="mono" href="...">YOUR_CHROME_STORE_URL</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-card">
+        <strong>Browser EQ</strong>
+        <div>Privacy Policy for the Browser EQ extension.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
