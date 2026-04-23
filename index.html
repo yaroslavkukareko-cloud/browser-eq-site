@@ -199,23 +199,19 @@
       border-color: rgba(255, 255, 255, 0.08);
     }
 
-    .hero-card {
-      background:
-        radial-gradient(circle at 75% 15%, rgba(255, 181, 76, 0.14), transparent 30%),
-        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.025));
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      padding: 24px;
-      overflow: hidden;
+    .hero-visual-clean {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .hero-card-inner {
-      border-radius: 22px;
-      background:
-        linear-gradient(180deg, rgba(12, 15, 23, 0.98), rgba(14, 18, 27, 0.98));
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 20px;
+    .real-eq-shot-clean {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .mini-top {
@@ -646,16 +642,13 @@
           </div>
         </div>
 
-        <div class="hero-card" aria-label="Browser EQ product preview">
-          <div class="hero-card-inner">
-            
-            <div class="real-eq-wrap">
-              <img
-                src="assets/eq-screenshot.png"
-                alt="Browser EQ interface screenshot"
-                class="real-eq-shot"
-              >
-            </div>
+        <div class="hero-visual-clean">
+          <img
+            src="assets/browser-eq-ui.png"
+            alt="Browser EQ interface screenshot"
+            class="real-eq-shot-clean"
+          >
+        </div>
     </section>
 
     <section id="features">
