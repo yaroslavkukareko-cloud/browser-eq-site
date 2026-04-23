@@ -302,6 +302,19 @@
       margin-bottom: 10px;
     }
 
+    .real-eq-wrap {
+      width: 100%;
+    }
+
+    .real-eq-shot {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      object-fit: contain;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+    
     .mock-graph {
       position: relative;
       height: 240px;
@@ -640,54 +653,13 @@
               <span class="mini-badge">Visual EQ Control</span>
             </div>
 
-            <div class="mock-app">
-              <div class="mock-gain">
-                <div class="mock-gain-label">GAIN</div>
-                <div class="mock-gain-track"></div>
-                <div class="mock-gain-value">0.0 dB</div>
-              </div>
-
-              <div class="mock-eq">
-                <div class="mock-eq-header">
-                  <span>Parametric graph</span>
-                  <span>Presets • Output Gain</span>
-                </div>
-
-                <div class="mock-graph">
-                  <svg class="mock-curve" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
-                    <defs>
-                      <filter id="glowA">
-                        <feGaussianBlur stdDeviation="8" result="blur" />
-                        <feMerge>
-                          <feMergeNode in="blur"/>
-                          <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                      </filter>
-                    </defs>
-                    <path
-                      d="M0,290 C120,290 135,120 220,120 C300,120 320,300 420,300 C530,300 560,150 680,150 C820,150 820,260 1000,260"
-                      fill="none"
-                      stroke="#efb34a"
-                      stroke-width="8"
-                      filter="url(#glowA)"
-                    />
-                    <circle cx="220" cy="120" r="13" fill="#efb34a"/>
-                    <circle cx="420" cy="300" r="13" fill="#efb34a"/>
-                    <circle cx="680" cy="150" r="13" fill="#efb34a"/>
-                  </svg>
-                </div>
-
-                <div class="mock-presets">
-                  <div class="mock-pill">Flat</div>
-                  <div class="mock-pill">Bass Boost</div>
-                  <div class="mock-pill">Vocal</div>
-                  <div class="mock-pill">Bright</div>
-                </div>
-              </div>
+            <div class="real-eq-wrap">
+              <img
+                src="assets/eq-screenshot.png"
+                alt="Browser EQ interface screenshot"
+                class="real-eq-shot"
+              >
             </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="features">
